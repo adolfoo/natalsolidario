@@ -1,0 +1,62 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Natal Solidário Pero Vaz</title>
+    <link rel="stylesheet" type="text/css" href="css/select.css">
+    <link href="css/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
+    <link href="css/SpryValidationTextarea.css" rel="stylesheet" type="text/css" />
+    <link href="css/SpryValidationSelect.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header class="cabecalho-site">
+      <table width="600" border="1">
+        <tbody>
+          <tr>
+            <td width="237" rowspan="4" style="text-align: center">Foto</td>
+            <td width="300"><h2 style="text-align: center; color: #FFFFFF;">Guilherme Barcelos</h2></td>
+          </tr>
+          <tr>
+            <td style="text-align: center; color: #FFFFFF;"><h4>13 anos</h4></td>
+          </tr>
+          <tr>
+            <td style="text-align: center; color: #FFFFFF;"><h4>Roupa:</h4></td>
+          </tr>
+          <tr>
+            <td style="text-align: center"><h4 style="text-align: center; color: #FFFFFF;">Calçado:</h4></td>
+          </tr>
+        </tbody>
+      </table>
+    </header>
+    <article class="elementoCentro">
+      <h2 class="titulo">Contato</h2>       
+      <form action="confirma.php" method="POST"> <!--  chama o envia.php -->        
+        <h3 class="titulo">Nome:  <span id="sprytextfield1">
+        <input type="text" name="nomeremetente" class="textfield-nome"/>
+        <br /><span class="textfieldRequiredMsg">Digite seu nome</span></span></h3>
+        <h3 class="titulo">E-mail:<span id="sprytextfield2"> 
+        <input type="text" name="emailremetente" class="textfield-nome"/>
+        <br />
+        <span class="textfieldRequiredMsg">Digite seu e-mail</span>
+        <span class="textfieldInvalidFormatMsg">Formato de e-mail inválido</span></span></h3>
+        <h3 class="titulo">Telefone: <span id="sprytextfield4">
+        <input type="text" name="telefone" class="textfield-telefone" /></span></h3>
+	    <span class="textfieldRequiredMsg">Digite seu telefone</span>
+        <input type="hidden" name="mensagem" />
+        <input name="enviar" type="reset" value="Limpar" class="btn-contato-reset"  />
+        <input name="enviar" type="submit" value="Enviar" class="btn-contato-enviar"  />                
+        </p>
+      </form> 
+	  <!-- Chama validação do formulário -->
+      <script type="text/javascript" src="js/SpryValidationTextField.js" language="javascript" ></script>
+      <script type="text/javascript" src="js/SpryValidationTextarea.js" language="javascript" ></script>
+      <script type="text/javascript" src="js/SpryValidationSelect.js" language="javascript" ></script>    
+      <script type="text/javascript">
+	    var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
+		var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2", "email");
+		var sprytextfield4 = new Spry.Widget.ValidationTextField("sprytextfield4");	
+		var crianca = "meu teste";
+	  </script>
+  	</article>
+  </body>
+</html>
